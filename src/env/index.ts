@@ -3,8 +3,8 @@ import { z } from "zod";
 
 const envSchema = z.object({
   PRICES_API: z.string(),
-  QUEUE_NAME=candles
-AMQP_SERVER=amqp://dev:senhadev@localhost:5672
+  QUEUE_NAME: z.string(),
+  AMQP_SERVER: z.string(),
 });
 
 const _env = envSchema.safeParse(process.env);
